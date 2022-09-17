@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragments.profile.ProfileFragment"
+    android:background="@color/purple_200">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.15"
+            android:src="@drawable/ic_profile_img_placeholder"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@color/purple_700"
+            android:background="@drawable/img_bg"
+            />
+
+        <TextView
+            android:id="@+id/tv_fullname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@string/fullname_placeholder"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="20sp"
+            android:textColor="@color/purple_700"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_fullname"
+            android:background="@drawable/profile_bottom_bg"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            android:padding="32dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_username"
+                    android:background="@drawable/tiny_btn_bg"
+                    android:padding="8dp"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    tools:text="@string/username_placeholder"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email"
+                    android:background="@drawable/tiny_btn_bg"
+                    android:padding="8dp"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    tools:text="@string/email_placeholder"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_address"
+                    android:background="@drawable/tiny_btn_bg"
+                    android:padding="8dp"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    tools:text="@string/address_placeholder"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_company"
+                    android:background="@drawable/tiny_btn_bg"
+                    android:padding="8dp"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    tools:text="@string/company_placeholder"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"
+                    />
+            </LinearLayout>
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            >-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:src="@drawable/ic_username"-->
+    <!--                android:background="@drawable/tiny_btn_bg"-->
+    <!--                android:padding="8dp"-->
+    <!--                app:tint="@color/white" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_company"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginLeft="8dp"-->
+    <!--                android:text="@string/username_placeholder"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:textSize="16sp"-->
+    <!--                android:fontFamily="@font/poppins"-->
+    <!--                />-->
+    <!--        </LinearLayout>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/copy_txt"
+                android:textStyle="italic"
+                android:layout_marginTop="40dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/users_dest">
+
+    <fragment
+        android:name="com.itech.androidassessment.presentation.fragments.userview.UsersFragment"
+        tools:layout="@layout/fragment_users"
+        android:id="@+id/users_dest"
+        android:label="Users List"
+        >
+
+        <action
+            android:id="@+id/action_users_dest_to_profile_dest"
+            app:destination="@id/profile_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+    </fragment>
+
+    <fragment
+        android:name="com.itech.androidassessment.presentation.fragments.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile"
+        android:id="@+id/profile_dest"
+        android:label="Profile">
+
+        <argument
+            android:name="id"
+            app:argType="long"
+
+            />
+    </fragment>
+
+</navigation>
